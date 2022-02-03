@@ -47,10 +47,10 @@ abi = json.loads(
 # chain_id = 4
 #
 # For connecting to ganache
-w3 = Web3(Web3.HTTPProvider("http://0.0.0.0:8545"))
-chain_id = 1337
-my_address = "0xa5a1053833979831af0D75A7f6d0Dc91Cf406517"
-private_key = "0xeb800d648f14aa1008f246a94bc9fc79a200629b5533fe493d3551ae384d8638"
+w3 = Web3(Web3.HTTPProvider("https://rinkeby.infura.io/v3/9df7580fcec44d9bad846e5385a6c95c"))
+chain_id = 4
+my_address = "0x0B7947D864095bE32eFAce1aDe0595646C8AB136"
+private_key = os.getenv("PRIVATE_KEY")
 
 # Create the contract in Python
 SimpleStorage = w3.eth.contract(abi=abi, bytecode=bytecode)
